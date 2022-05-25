@@ -16,6 +16,7 @@ public class Sim {
 	private String type;
 	
 	@ManyToOne
+	//@ManyToOne(fetch = Fetch.LAZY)//many to one defaltly eager
 	@JoinColumn
 	private Mobile mobile;
 
