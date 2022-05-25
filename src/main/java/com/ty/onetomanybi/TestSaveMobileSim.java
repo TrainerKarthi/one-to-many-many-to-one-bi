@@ -1,4 +1,4 @@
-package com.ty.onetomanybi;
+ package com.ty.onetomanybi;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,19 +16,19 @@ public class TestSaveMobileSim {
 		EntityTransaction entityTransaction = entityManager.getTransaction();
 
 		Mobile mobile = new Mobile();
-		mobile.setName("POCO");
+		mobile.setName("apple");
 		mobile.setCost(20000);
 
 		Sim sim1 = new Sim();
-		sim1.setProvider("Jio");
+		sim1.setProvider("Airtel");
 		sim1.setType("4G");
 
 		Sim sim2 = new Sim();
-		sim2.setProvider("Airtel");
+		sim2.setProvider("Jio");
 		sim2.setType("5G");
 
 		Sim sim3 = new Sim();
-		sim3.setProvider("docomo");
+		sim3.setProvider("Bsnl");
 		sim3.setType("3G");
 
 		List<Sim> sims = new ArrayList<Sim>();
@@ -44,9 +44,6 @@ public class TestSaveMobileSim {
 
 		entityTransaction.begin();
 		entityManager.persist(mobile);
-		entityManager.persist(sim1);
-		entityManager.persist(sim2);
-		entityManager.persist(sim3);
 		entityTransaction.commit();
 	}
 
